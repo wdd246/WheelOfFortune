@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body,html{
+            margin:0;
+            padding:0;
+            text-align: center;
+            background-color: darkolivegreen;
+        }
+        #points{
+            background-color: white;
+            width: 300px;
+            height: 150px;
+            border-radius: 10px;
+            margin-top: 30px;
+            font-family: fantasy;
+            font-size: 40px;
+            
+        }
+        #fir{
+            background-color: white;
+            height: 250px;
+            width: 300px;
+            border-radius: 10px;
+            margin-top: 30px;
+            font-family: fantasy;
+            font-size: 75px;
+            float:left;
+            margin-left: 21.5%;
+        }
+        #sec,#thi{
+            background-color: white;
+            height: 250px;
+            width: 300px;
+            border-radius: 10px;
+            margin-top: 30px;
+            font-family: fantasy;
+            font-size: 75px;
+            float:left;
+            margin-left: 5%;
+            
+        }
+         #fir2{
+            background-color: white;
+            height: 250px;
+            width: 300px;
+            border-radius: 10px;
+            margin-top: 30px;
+            font-family: fantasy;
+            font-size: 75px;
+            float:left;
+            margin-left: 21.5%;
+        }
+        #sec2,#thi2{
+            background-color: white;
+            height: 250px;
+            width: 300px;
+            border-radius: 10px;
+            margin-top: 30px;
+            font-family: fantasy;
+            font-size: 75px;
+            float:left;
+            margin-left: 5%;
+            
+        }
+         #fir3{
+            background-color: white;
+            height: 250px;
+            width: 300px;
+            border-radius: 10px;
+            margin-top: 30px;
+            font-family: fantasy;
+            font-size: 75px;
+            float:left;
+            margin-left: 21.5%;
+        }
+        #sec3,#thi3{
+            background-color: white;
+            height: 250px;
+            width: 300px;
+            border-radius: 10px;
+            margin-top: 30px;
+            font-family: fantasy;
+            font-size: 75px;
+            float:left;
+            margin-left: 5%;
+            
+        }
+        #but{
+            background-color: black;
+            color: white;
+            height: 60px;
+            width: 150px;
+            margin-top: 130px;
+            font-family: fantasy;
+            font-size: 50px;
+            float:left;
+            margin-left: 5%
+            
+        }
+        
+    </style>
+    <script>
+    
+    
+    function play(){
+    var f = document.getElementById("f");
+    var s = document.getElementById("s");
+    var t = document.getElementById("t");
+    var f2 = document.getElementById("f2");
+    var s2 = document.getElementById("s2");
+    var t2 = document.getElementById("t2");
+    var f3 = document.getElementById("f3");
+    var s3 = document.getElementById("s3");
+    var t3 = document.getElementById("t3");
+    var poi = document.getElementById("poi").innerHTML;
+    
+    var pierwsza = Math.floor((Math.random() * 10) + 1);
+    var druga = Math.floor((Math.random() * 10) + 1);
+    var trzecia = Math.floor((Math.random() * 10) + 1);
+    var pierwsza2 = Math.floor((Math.random() * 10) + 1);
+    var druga2 = Math.floor((Math.random() * 10) + 1);
+    var trzecia2 = Math.floor((Math.random() * 10) + 1);
+    var pierwsza3 = Math.floor((Math.random() * 10) + 1);
+    var druga3 = Math.floor((Math.random() * 10) + 1);
+    var trzecia3 = Math.floor((Math.random() * 10) + 1);
+    f.innerHTML = pierwsza;
+    s.innerHTML = druga;
+    t.innerHTML = trzecia;
+    f2.innerHTML = pierwsza2;
+    s2.innerHTML = druga2;
+    t2.innerHTML = trzecia2;
+    f3.innerHTML = pierwsza3;
+    s3.innerHTML = druga3;
+    t3.innerHTML = trzecia3;
+        
+        
+     document.getElementById("fir").style.backgroundColor = "white";
+     document.getElementById("sec").style.backgroundColor = "white";
+     document.getElementById("thi").style.backgroundColor = "white"; 
+        document.getElementById("fir2").style.backgroundColor = "white";
+     document.getElementById("sec2").style.backgroundColor = "white";
+     document.getElementById("thi2").style.backgroundColor = "white";  
+        document.getElementById("fir3").style.backgroundColor = "white";
+     document.getElementById("sec3").style.backgroundColor = "white";
+     document.getElementById("thi3").style.backgroundColor = "white";  
+    
+        
+    if(pierwsza==druga && druga==trzecia ){
+        var value = parseInt(poi,1) + 100;
+        document.getElementById("poi").innerHTML = value;
+        document.getElementById("fir").style.backgroundColor = "gold";
+        document.getElementById("sec").style.backgroundColor = "gold";
+        document.getElementById("thi").style.backgroundColor = "gold";
+        alert("WYGRAŁEŚ !!!");
+    }
+    if(pierwsza2==druga2 && druga2==trzecia2 ){
+        var value = parseInt(poi,1) + 100;
+        document.getElementById("poi").innerHTML = value;
+        document.getElementById("fir2").style.backgroundColor = "gold";
+        document.getElementById("sec2").style.backgroundColor = "gold";
+        document.getElementById("thi2").style.backgroundColor = "gold";
+        alert("WYGRAŁEŚ !!!");
+    }
+    if(pierwsza3==druga3 && druga3==trzecia3 ){
+        var value = parseInt(poi,10) + 100;
+        document.getElementById("poi").innerHTML = value;
+        document.getElementById("fir3").style.backgroundColor = "gold";
+        document.getElementById("sec3").style.backgroundColor = "gold";
+        document.getElementById("thi3").style.backgroundColor = "gold";
+        alert("WYGRAŁEŚ !!!");
+    }
+    if(pierwsza==pierwsza2 && pierwsza2==pierwsza3 ){
+        var value = parseInt(poi,10) + 100;
+        document.getElementById("poi").innerHTML = value;
+        document.getElementById("fir").style.backgroundColor = "gold";
+        document.getElementById("fir2").style.backgroundColor = "gold";
+        document.getElementById("fir3").style.backgroundColor = "gold";
+        alert("WYGRAŁEŚ !!!");
+    }
+    if(druga==druga2 && druga2==druga3 ){
+        var value = parseInt(poi,10) + 100;
+        document.getElementById("poi").innerHTML = value;
+        document.getElementById("sec").style.backgroundColor = "gold";
+        document.getElementById("sec2").style.backgroundColor = "gold";
+        document.getElementById("sec3").style.backgroundColor = "gold";
+        alert("WYGRAŁEŚ !!!");
+    }
+    if(trzecia==trzecia2 && trzecia2==trzecia3 ){
+        var value = parseInt(poi,10) + 100;
+        document.getElementById("poi").innerHTML = value;
+        document.getElementById("thi").style.backgroundColor = "gold";
+        document.getElementById("thi2").style.backgroundColor = "gold";
+        document.getElementById("thi3").style.backgroundColor = "gold";
+        alert("WYGRAŁEŚ !!!");
+    }
+    if(pierwsza==druga2 && druga2==trzecia3 ){
+        var value = parseInt(poi,10) + 100;
+        document.getElementById("poi").innerHTML = value;
+        document.getElementById("fir").style.backgroundColor = "gold";
+        document.getElementById("sec2").style.backgroundColor = "gold";
+        document.getElementById("thi3").style.backgroundColor = "gold";
+        alert("WYGRAŁEŚ !!!");
+    }
+    if(trzecia==druga2 && druga2==pierwsza3 ){
+        var value = parseInt(poi,10) + 100;
+        document.getElementById("poi").innerHTML = value;
+        document.getElementById("thi").style.backgroundColor = "gold";
+        document.getElementById("sec2").style.backgroundColor = "gold";
+        document.getElementById("fir3").style.backgroundColor = "gold";
+        alert("WYGRAŁEŚ !!!");
+    }
+        
+        
+        
+    /* if(pierwsza==druga || druga==trzecia || pierwsza==trzecia){
+       //  var value = parseInt(poi,10) + 0;
+       // document.getElementById("poi").innerHTML = value;
+    }
+    
+     if(pierwsza2==10 || druga2==10 || trzecia2==10){
+        // var value = parseInt(poi,10) + 0;
+       // document.getElementById("poi").innerHTML = value;
+    }
+    if(pierwsza2==druga2 || druga2==trzecia2 || pierwsza2==trzecia2){
+        // var value = parseInt(poi,10) + 0;
+       // document.getElementById("poi").innerHTML = value;
+    }
+    
+     if(pierwsza3==10 || druga3==10 || trzecia3==10){
+       //  var value = parseInt(poi,10) + 0;
+       // document.getElementById("poi").innerHTML = value;
+    }
+     if(pierwsza3==druga3 || druga3==trzecia3 || pierwsza3==trzecia3){
+        // var value = parseInt(poi,10) + 0;
+       // document.getElementById("poi").innerHTML = value;
+    } */
+    }
+    </script>
+</head>
+<body>
+    <center>
+    <div id="points">POINTS<br><p id="poi">0</p></div>
+    <div id="fir"><p id="f"></p></div>
+    <div id="sec"><p id="s"></p></div>
+    <div id="thi"><p id="t"></p></div>
+    <div id="fir2"><p id="f2"></p></div>
+    <div id="sec2"><p id="s2"></p></div>
+    <div id="thi2"><p id="t2"></p></div>
+    <div id="fir3"><p id="f3"></p></div>
+    <div id="sec3"><p id="s3"></p></div>
+    <div id="thi3"><p id="t3"></p></div>
+    <button id="but" onclick="play()">PLAY</button>
+    </center>
+</body>
+</html>
